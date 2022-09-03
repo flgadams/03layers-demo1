@@ -13,7 +13,7 @@ class RootViewController: UIViewController {
 
     lazy var aButton:UIButton = {  //snip zxuibtnl
         let ui = UIButton(type: .system)
-        ui.setTitle("A", for: .normal)
+        ui.setTitle("A: Layers w/ 3 Rectangles ", for: .normal)
         ui.titleLabel?.font = .systemFont(ofSize: 20)
         ui.setTitleColor(UIColor.white, for: UIControl.State.normal)
         ui.backgroundColor = UIColor.orange
@@ -25,14 +25,13 @@ class RootViewController: UIViewController {
     
     @objc fileprivate func aButtonTouchSelector(sender:Any) {
         let file = "\(#file)".components(separatedBy: "/").last!; NSLog("\n\u{2705} \(#function) Line \(#line) of \(file)\n")
-        let vc = UIViewController()
-        vc.view.backgroundColor = .purple
+        let vc = LayerWith3RectanglesController()
         present(vc, animated: true)
     }
     
     lazy var bButton:UIButton = {  //snip zxuibtnl
         let ui = UIButton(type: .system)
-        ui.setTitle("B", for: .normal)
+        ui.setTitle("B: Layer Contents is CGImage", for: .normal)
         ui.titleLabel?.font = .systemFont(ofSize: 20)
         ui.setTitleColor(UIColor.white, for: UIControl.State.normal)
         ui.backgroundColor = UIColor.orange
@@ -44,7 +43,7 @@ class RootViewController: UIViewController {
     
     @objc fileprivate func bButtonTouchSelector(sender:Any) {
         let file = "\(#file)".components(separatedBy: "/").last!; NSLog("\n\u{2705} \(#function) Line \(#line) of \(file)\n")
-        
+        present(LayerContentsController(), animated: true)
     }
     lazy var cButton:UIButton = {  //snip zxuibtnl
         let ui = UIButton(type: .system)
