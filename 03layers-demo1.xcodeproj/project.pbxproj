@@ -14,6 +14,9 @@
 		2102187A2895B92300195DC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210218792895B92300195DC9 /* RootViewController.swift */; };
 		2102187F2895B92400195DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2102187E2895B92400195DC9 /* Assets.xcassets */; };
 		210218822895B92400195DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210218802895B92400195DC9 /* LaunchScreen.storyboard */; };
+		2117037328CD40630046F702 /* PositionLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117037228CD40630046F702 /* PositionLayerController.swift */; };
+		2117037528CD4F900046F702 /* ShapeLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117037428CD4F900046F702 /* ShapeLayerController.swift */; };
+		21F70F9228CC1B9E0063ACD7 /* LayerAnchorPointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F70F9128CC1B9E0063ACD7 /* LayerAnchorPointController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2102187E2895B92400195DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		210218812895B92400195DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		210218832895B92400195DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2117037228CD40630046F702 /* PositionLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionLayerController.swift; sourceTree = "<group>"; };
+		2117037428CD4F900046F702 /* ShapeLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLayerController.swift; sourceTree = "<group>"; };
+		21F70F9128CC1B9E0063ACD7 /* LayerAnchorPointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerAnchorPointController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,27 @@
 		210218742895B92300195DC9 /* 03layers-demo1 */ = {
 			isa = PBXGroup;
 			children = (
+				2117037128CD3FB80046F702 /* Controllers */,
 				210218752895B92300195DC9 /* AppDelegate.swift */,
 				210218772895B92300195DC9 /* SceneDelegate.swift */,
-				210218792895B92300195DC9 /* RootViewController.swift */,
 				2101811A28C400BA00BFD9CC /* LayerContentsController.swift */,
 				2102187E2895B92400195DC9 /* Assets.xcassets */,
 				210218802895B92400195DC9 /* LaunchScreen.storyboard */,
 				210218832895B92400195DC9 /* Info.plist */,
-				2101811628C3F14B00BFD9CC /* LayerWith3RectanglesController.swift */,
 			);
 			path = "03layers-demo1";
+			sourceTree = "<group>";
+		};
+		2117037128CD3FB80046F702 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				210218792895B92300195DC9 /* RootViewController.swift */,
+				2101811628C3F14B00BFD9CC /* LayerWith3RectanglesController.swift */,
+				21F70F9128CC1B9E0063ACD7 /* LayerAnchorPointController.swift */,
+				2117037228CD40630046F702 /* PositionLayerController.swift */,
+				2117037428CD4F900046F702 /* ShapeLayerController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +159,12 @@
 			files = (
 				2102187A2895B92300195DC9 /* RootViewController.swift in Sources */,
 				2101811B28C400BA00BFD9CC /* LayerContentsController.swift in Sources */,
+				21F70F9228CC1B9E0063ACD7 /* LayerAnchorPointController.swift in Sources */,
 				210218762895B92300195DC9 /* AppDelegate.swift in Sources */,
 				210218782895B92300195DC9 /* SceneDelegate.swift in Sources */,
 				2101811728C3F14B00BFD9CC /* LayerWith3RectanglesController.swift in Sources */,
+				2117037328CD40630046F702 /* PositionLayerController.swift in Sources */,
+				2117037528CD4F900046F702 /* ShapeLayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

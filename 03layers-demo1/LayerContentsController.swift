@@ -8,7 +8,7 @@
 import UIKit
 
 class LayerContentsController: UIViewController {
-// DEMO THAT A LAYER.CONTENTS IS A CGIMAGE
+// DEMO THAT the LAYER.CONTENTS IS A CGIMAGE
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +18,10 @@ class LayerContentsController: UIViewController {
         let layerWithCGImage = CALayer()
         let bananaImage = UIImage(named: "banana")!
         layerWithCGImage.contents = bananaImage.cgImage
-        layerWithCGImage.frame = CGRect(origin: CGPoint(x: 180, y: 180), size: CGSize(width: 150, height: 150))
+        layerWithCGImage.contentsScale = 2 // 1 is too big
+        layerWithCGImage.contentsGravity = .center
+        //layerWithCGImage.contentsRect = CGRect(x: -0.2, y: -0.2, width: 1, height: 1)
+        layerWithCGImage.frame = CGRect(origin: CGPoint(x: 180, y: 180), size: CGSize(width: 300, height: 350))
         
         self.view.layer.addSublayer(layerWithCGImage)
         

@@ -47,7 +47,7 @@ class RootViewController: UIViewController {
     }
     lazy var cButton:UIButton = {  //snip zxuibtnl
         let ui = UIButton(type: .system)
-        ui.setTitle("C", for: .normal)
+        ui.setTitle("C: AnchorPoint ", for: .normal)
         ui.titleLabel?.font = .systemFont(ofSize: 20)
         ui.setTitleColor(UIColor.white, for: UIControl.State.normal)
         ui.backgroundColor = UIColor.orange
@@ -59,12 +59,12 @@ class RootViewController: UIViewController {
     
     @objc fileprivate func cButtonTouchSelector(sender:Any) {
         let file = "\(#file)".components(separatedBy: "/").last!; NSLog("\n\u{2705} \(#function) Line \(#line) of \(file)\n")
-        
+        present(LayerAnchorPointController(), animated: true)
     }
     
     lazy var dButton:UIButton = {  //snip zxuibtnl
         let ui = UIButton(type: .system)
-        ui.setTitle("D", for: .normal)
+        ui.setTitle("D: Position a layer, and CATextLayer", for: .normal)
         ui.titleLabel?.font = .systemFont(ofSize: 20)
         ui.setTitleColor(UIColor.white, for: UIControl.State.normal)
         ui.backgroundColor = UIColor.orange
@@ -76,11 +76,12 @@ class RootViewController: UIViewController {
     
     @objc fileprivate func dButtonTouchSelector(sender:Any) {
         let file = "\(#file)".components(separatedBy: "/").last!; NSLog("\n\u{2705} \(#function) Line \(#line) of \(file)\n")
+        present(PositionLayerController(), animated: true)
         
     }
     lazy var eButton:UIButton = {  //snip zxuibtnl
         let ui = UIButton(type: .system)
-        ui.setTitle("E", for: .normal)
+        ui.setTitle("E: CAShapeLayer", for: .normal)
         ui.titleLabel?.font = .systemFont(ofSize: 20)
         ui.setTitleColor(UIColor.white, for: UIControl.State.normal)
         ui.backgroundColor = UIColor.orange
@@ -92,8 +93,9 @@ class RootViewController: UIViewController {
     
     @objc fileprivate func eButtonTouchSelector(sender:Any) {
         let file = "\(#file)".components(separatedBy: "/").last!; NSLog("\n\u{2705} \(#function) Line \(#line) of \(file)\n")
-        
+        present(ShapeLayerController(), animated: true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemGray
